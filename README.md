@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/turhn/personal_wordlist.png)](http://travis-ci.org/turhn/personal_wordlist)
+
 # personal_wordlist
 
 **personal_wordlist** is a wordlist generator backend to create wordlists from the given personal data. It is originally designed for security purposes.
