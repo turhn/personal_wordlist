@@ -92,9 +92,9 @@ end
 
 Contributing to personal_wordlist:
 
-Fork the official repository.
-Make your changes in a topic branch.
-Send a pull request.
+- Fork the official repository.
+- Make your changes in a topic branch.
+- Send a pull request.
 
 ## Licence
 
