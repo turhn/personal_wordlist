@@ -37,7 +37,7 @@ end
 
 ```ruby
 partial { first_name[0..1] }
-partial { '123' }
+partial '123' # You can also use string arguments
 partial { last_name[0].downcase }
 ```
 Consider the data is ```{ first_name: 'John', last_name: 'Doe' }``` and the result will be _Jo123d_.
