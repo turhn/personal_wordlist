@@ -2,12 +2,15 @@ module PersonalWordlist
   module DSL
     # Evaluate of methods in `partial` blocks
     class Partial
-      def initialize(personal_data, block)
+      def initialize(personal_data, block, arg)
+        fail ArgumentError if arg && block
         @block = block
         @personal_data = personal_data
+        @arg = arg
       end
 
       def run!
+        @block = proc { @arg } if @arg # For string args
         instance_eval(&@block)
       end
 

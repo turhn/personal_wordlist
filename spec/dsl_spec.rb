@@ -16,7 +16,7 @@ end
 describe 'SocialWordlist::DSL' do
   subject { TestClass.new(john_doe) }
   describe '#partial' do
-    it 'should fail if block is not given' do
+    it 'should fail if block or string arg is not given' do
       expect { subject.partial }.to raise_error ArgumentError
     end
     it 'should access class variables' do
@@ -31,6 +31,14 @@ describe 'SocialWordlist::DSL' do
           "#{first_name[0]}123#{last_name[0]}xyz"
         end
       end.to change { subject.current_password }.from('').to('J123Dxyz')
+    end
+    it 'should accept string arguments' do
+      expect do
+        subject.partial('test') { 'other text' }
+      end.to raise_error ArgumentError
+      expect do
+        subject.partial 'test'
+      end.to change { subject.current_password }.from('').to('test')
     end
   end
 

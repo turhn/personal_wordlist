@@ -4,9 +4,10 @@ require 'personal_wordlist/dsl/sequence'
 module PersonalWordlist
   # DSL Syntax Methods
   module DSL
-    def partial(&block)
-      fail ArgumentError unless block_given?
-      @current_password += Partial.new(@personal_data, block).run!
+    def partial(arg = nil, &block)
+      # Either string or block must exist
+      fail ArgumentError unless !arg.nil? ^ block_given?
+      @current_password += Partial.new(@personal_data, block, arg).run!
     end
 
     def sequence(range, &block)
