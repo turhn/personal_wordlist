@@ -6,6 +6,10 @@
 
 personal_wordlist uses a simple DSL to create password patterns and those patterns are used to create password sequences.
 
+## CLI
+
+If you are looking for a CLI to create dictionaries from personal data. Check [this](https://github.com/turhn/personal_wordlist_cli) out.
+
 ## Installation
 
 ```shell
@@ -87,7 +91,7 @@ end
 
 ## Future Plans
 
-- CLI, I see that as a must.
+- ~~CLI, I see that as a must.~~ Here is the link for the [CLI](https://github.com/turhn/personal_wordlist_cli).
 - Input Data Adaptors, I am planning to create adaptors such as parsing yaml, xml, csv files into input hash parameter format. 
 
 ## Contribution
